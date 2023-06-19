@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1 update",
+      "price": 123123,
+      "img": "http://picsum.photos/200/200"
+    },
+    {
+      "name": "Product 2",
+      "price": 321,
+      "img": "http://picsum.photos/200/200",
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "email": "demo@gmail.com",
+      "password": "$2a$10$6RUuRitzLbKbPv3pQm8cYuUFIwnIvIOvEDV/yZEoh5W/oxSZfyWju",
+      "name": "demo",
+      "confirmPassword": "123123",
+      "id": 1
+    },
+    {
+      "email": "demo1@gmail.com",
+      "password": "$2a$10$QWkz/TufkO3dfYRHtZh8e.qiDKQqTY7aVgXNoNnX68/PBWCSovL/O",
+      "name": "demo1",
+      "confirmPassword": "123123",
+      "id": 2
+    }
+  ]
+}

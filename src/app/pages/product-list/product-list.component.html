@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Ten</th>
+      <th>Gia</th>
+      <th>Anh</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let product of products; index as i">
+      <td>{{i + 1}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>
+        <img [src]="product.img" alt="">
+      </td>
+      <td>
+        <button (click)="removeItem(product.id)">Delete</button>
+        <button><a routerLink="update/{{product.id}}">Update</a></button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,8 @@
+<form (ngSubmit)="onHandleSubmit()" [formGroup]="productForm">
+  <input type="text" formControlName="name" placeholder="Ten san pham">
+  <input type="number" formControlName="price" placeholder="Gia san pham">
+  <input type="text" formControlName="img" placeholder="Anh san pham">
+
+  <button type="submit">Update</button>
+
+</form>

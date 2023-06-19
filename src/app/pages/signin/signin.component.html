@@ -1,0 +1,17 @@
+<form (ngSubmit)="onHandleSubmit()" [formGroup]="formSignin">
+  <div>
+    <label for="">Email</label>
+    <input type="email" formControlName="email">
+  </div>
+
+  <div>
+    <label for="">Password</label>
+    <input type="password" formControlName="password">
+  </div>
+  <div
+    *ngIf="formSignin.get('password')?.hasError('required') && (formSignin.get('password')?.touched || formSignin.get('password')?.dirty)">
+    password is required
+  </div>
+
+  <button>submit</button>
+</form>

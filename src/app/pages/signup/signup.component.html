@@ -1,0 +1,36 @@
+<form (ngSubmit)="onHandleSubmit()" [formGroup]="formSignup">
+  <div>
+    <label for="">UserName</label>
+    <input type="text" formControlName="name">
+
+    <div
+      *ngIf="formSignup.get('name')?.hasError('required') && (formSignup.get('name')?.touched || formSignup.get('name')?.dirty)">
+      name is required
+    </div>
+  </div>
+
+  <div>
+    <label for="">Email</label>
+    <input type="email" formControlName="email">
+  </div>
+
+  <div>
+    <label for="">Password</label>
+    <input type="password" formControlName="password">
+  </div>
+  <div
+    *ngIf="formSignup.get('password')?.hasError('required') && (formSignup.get('password')?.touched || formSignup.get('password')?.dirty)">
+    password is required
+  </div>
+
+  <div>
+    <label for="">ConfirmPassword</label>
+    <input type="password" formControlName="confirmPassword">
+  </div>
+  <div
+    *ngIf="formSignup.get('confirmPassword')?.hasError('required') && (formSignup.get('confirmPassword')?.touched || formSignup.get('confirmPassword')?.dirty)">
+    Mat khau khong trung khop
+  </div>
+
+  <button>submit</button>
+</form>
